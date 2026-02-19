@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  vpn-bot:
+    build: .
+    container_name: telegram-vpn-bot
+    environment:
+      - BOT_TOKEN=8512123339:AAEOrT2yPiH1OmScwKByngVkOrnqroXaYco
+      - ADMIN_IDS=8131712128
+    volumes:
+      - ./data:/data
+    restart: unless-stopped
